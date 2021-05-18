@@ -1,4 +1,4 @@
-department provider "google" {
+provider "google" {
   version = "~> 2.0"
   project = var.project
   region  = var.region
@@ -59,8 +59,8 @@ resource "google_compute_instance" "hashicat" {
   tags = ["http-server"]
 
   labels = {
-    name       = "hashicat",
-    department = "devops",
+    name       = "hashicat"
+    department = "devops"
     billable   = true
   }
 
